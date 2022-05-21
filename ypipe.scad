@@ -27,12 +27,12 @@ module Pipe(radius=10,
  */
 module YPipe(radius=10, 
              total_height=40, 
-             y_spacing=45, 
+             y_spacing=10, 
              wall_thickness=1, 
              top_extension=10, 
              bottom_extension=10) {
     height = total_height - top_extension - bottom_extension;
-    topw = y_spacing - 2 * radius;
+    topw = y_spacing + 2 * radius;
     Pipe(radius, bottom_extension, wall_thickness);
     translate([0, 0, bottom_extension]) difference() {
         union() {
